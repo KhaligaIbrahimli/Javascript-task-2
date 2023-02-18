@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moving box</title>
+        <style>
+            #movingbox {
+                width: 100px;
+                height: 100px;
+                background-color: blueviolet;
+                position: relative;
+                transition: all 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="movingbox"></div>
+
+        <script>
+            const movingbox = document.getElementById("movingbox");
+            let topPosition = 0;
+            let leftPosition = 0;
+
+            setInterval(function () {
+                topPosition += 10;
+                leftPosition += 10;
+                movingbox.style.top = topPosition + "px";
+                movingbox.style.left = leftPosition + "px";
+            }, 1000);
+        </script>
+    </body>
+</html>

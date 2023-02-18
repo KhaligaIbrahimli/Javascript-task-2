@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #myBox {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myBox"></div>
+
+        <script>
+            const myBox = document.getElementById("myBox");
+
+            let isGrowing = true;
+
+            setInterval(() => {
+                if (isGrowing) {
+                    myBox.style.width = "400px";
+                    myBox.style.height = "400px";
+                    myBox.style.background = "blue";
+                } else {
+                    myBox.style.width = "200px";
+                    myBox.style.height = "200px";
+                    myBox.style.background = "red";
+                }
+
+                isGrowing = !isGrowing;
+            }, 1000);
+        </script>
+    </body>
+</html>
